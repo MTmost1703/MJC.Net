@@ -1,0 +1,76 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="MJC.login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - MJC Portal Login</title>
+    <script src="~/Scripts/login-script.js"></script>
+    <link rel="stylesheet" href="~/CSS_styles/login-styles.css"/>
+
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="images/Major_Logo.png" alt="MJC Logo" class="logo-image" />
+            <span class="logo-text">MJC Portal</span>
+        </div>
+    </div>
+
+    <!-- Login Card -->
+    <div class="login-container">
+        <div class="login-card">
+            <div class="background-image">
+                <!-- Background image will be added via CSS -->
+            </div>
+            <form class="login-form" id="login-form">
+                <h2><span style="font-size: 24px; font-weight: normal; opacity: 0.7; display: block;">MJC Portal</span></h2>
+                <div class="form-group">
+                    <label for="username">User Name</label>
+                    <div class="input-icon-wrapper">
+                        <input type="text" id="username" name="username" placeholder="User Name" class="modern-input" autocomplete="username" required="required" />
+                        <%--<asp:TextBox runat="server" id="username" name="username" placeholder="User Name" class="modern-input" autocomplete="username" required="true"></asp:TextBox>--%>
+                        <span class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-icon-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Password" class="modern-input" autocomplete="current-password" required="required" />
+                        <%--<asp:TextBox runat="server" id="password" name="password" placeholder="password" class="modern-input" autocomplete="username" required="true"></asp:TextBox>--%>
+                        <span class="input-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </span>
+                        <span class="toggle-password" tabindex="0" role="button" aria-label="Toggle password visibility">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </span>
+                    </div>
+                </div>
+                <button type="submit" class="login-btn" id="login-btn">
+                    <span style="display: flex; align-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                            <polyline points="10 17 15 12 10 7"></polyline>
+                            <line x1="15" y1="12" x2="3" y2="12"></line>
+                        </svg>
+                        เข้าสู่ระบบ
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Page Transition Element -->
+    <div class="page-transition"></div>
+    
+    <!-- Touch Feedback Element -->
+    <div id="touch-feedback" class="touch-feedback"></div>
+
+    <script src="login-script.js"></script>
+</body>
+</html>
